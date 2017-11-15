@@ -1,0 +1,126 @@
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+
+*background:            S_base03
+*foreground:            S_base0
+*fadeColor:             S_base03
+*cursorColor:           S_base1
+*pointerColorBackground:S_base01
+*pointerColorForeground:S_base1
+
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
+
+!! black dark/light
+*color0:                S_base02
+*color8:                S_base03
+!
+!!! red dark/light
+*color1:                S_red
+*color9:                S_orange
+!
+!!! green dark/light
+*color2:                S_green
+*color10:               S_base01
+!
+!!! yellow dark/light
+*color3:                S_yellow
+*color11:               S_base00
+!
+!!! blue dark/light
+*color4:                S_blue
+*color12:               S_base0
+!
+!!! magenta dark/light
+*color5:                S_magenta
+*color13:               S_violet
+!
+!!! cyan dark/light
+*color6:                S_cyan
+*color14:               S_base1
+!
+!!! white dark/light
+*color7:                S_base2
+*color15:               S_base3
+URxvt*termName: rxvt-256color
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintslight
+URxvt*dynamicColors: on
+URxvt*loginShell: true
+URxvt*scrollColor: #777777
+URxvt*scrollStyle: plain
+URxvt*scrollTtyKeypress: true
+URxvt*scrollTtyOutput:false
+URxvt*scrollWithBuffer: false
+URxvt*secondaryScreen: true
+URxvt*secondaryScroll: true
+URxvt*skipScroll: true
+URxvt*scrollBar: false
+URxvt*scrollBar_right: false
+URxvt*scrollBar_floating: false
+URxvt*fading: 30
+URxvt*utmpInhibit: false
+URxvt*urgentOnBell: false
+URxvt*visualBell: false
+URxvt*mapAlert: true
+URxvt*mouseWheelScrollPage: false
+URxvt*font: xft:anonymous pro for powerline:pixelsize=14
+URxvt*boldFont: xft:anonymous pro for powerline:pixelsize=14
+URxvt*underlineColor: yellow
+URxvt*depth: 32
+URxvt*saveLines: 5000
+URxvt*buffered: true
+URxvt*hold: true
+URxvt.iso14755: False
+URxvt*print-pipe: cat > $HOME/$(echo urxvt.dump.$(date +'%Y%M%d%H%m%S'))
+URxvt*perl-ext:
+URxvt.perl-ext-common:  defualt,clipboard,url-select,keyboard-select
+URxvt.url-select.launcher:  chromium
+URxvt.url-select.underline: true
+URxvt.keysym.M-u:   perl:url-select:select_next
+URxvt.keysym.M-Escape:  perl:keyboard-select:activate
+URxvt.keysym.M-s:   perl:keyboard-select:search
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+
+! ROFI SETUP HERE !
+
+! Enable the extended coloring options
+rofi.color-enabled: true
+!                  bg       border   separator
+rofi.color-window: S_base03, S_base00, S_base00
+!                  bg       fg       bg-alt   hl-bg    hl-fg
+rofi.color-normal: S_base03, #c5c8c6, S_base03, S_base02, #fff
+rofi.color-active: S_base03, #c5c8c6, S_base03, S_base02, #fff
+rofi.color-urgent: S_base03, #c6c8c6, S_base03, S_base02, #fff
+!1e1e20
+rofi.width: 50
+rofi.height: 14
+rofi.separator-style: dash
+rofi.sidebar-mode: true
+rofi.lines: 10
+rofi.font: Fira Code 10
+rofi.bw: 2
+rofi.columns: 3
+rofi.padding: 10
+rofi.fixed-num-lines: true
+rofi.hide-scrollbar: true
+rofi.terminal: termite
+rofi.yoffset: 0
+!rofi.xoffset: 750
+!rofi.opacity: 100
